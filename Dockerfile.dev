@@ -1,0 +1,13 @@
+# for development env
+
+FROM node:alpine3.10
+
+WORKDIR /interactive-price-component
+
+COPY ./package.json /interactive-price-component
+
+RUN npm install
+
+COPY . /interactive-price-component
+
+CMD [ "npm","start" ]
